@@ -17,9 +17,9 @@
 
             <nav class="header-nav">
                 <ul>
-                    <li><a href="">Программы</a></li>
-                    <li><a href="">Преимуества</a></li>
-                    <li><a href="">Контакты</a></li>
+                    <li><a href="#program">Программы</a></li>
+                    <li><a href="#advantages">Преимуества</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
 
@@ -28,7 +28,7 @@
             </div>
 
             <div class="header-feedback">
-                <a href="" class="btn btn-green">Обратная связь</a>
+                <a href="#feedback" class="btn btn-green">Обратная связь</a>
             </div>
         </div>
         <div class="clear"></div>
@@ -78,7 +78,7 @@
                 <div>
                     <div class="grid_7">
                         <div class="main-text-block-padding main-text-block-btn">
-                            <a href="" class="btn btn-large btn-orange">Записаться на консультацию</a>
+                            <a href="#feedback" class="btn btn-large btn-orange">Записаться на консультацию</a>
                         </div>
                     </div>
                 </div>
@@ -88,9 +88,9 @@
             <section class="container_12 main-video">
 
                 <div>
-                    <div class="grid_7">
+                    <div class="grid_7 alpha omega" style="background-color: black">
                         <div class="main-video-block">
-                            <iframe width="542" height="337" src="https://www.youtube.com/embed/gmQ3I42HjME" frameborder="0" allowfullscreen></iframe>
+                            <iframe width="540" height="337" src="https://www.youtube.com/embed/gmQ3I42HjME" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="grid_5">
@@ -110,16 +110,14 @@
         
         <section class="container_12 program-header">
             <header>
-                <p>Программы <span class="program-header-green">похудения</span></p>
+                <p><a name="program"></a>Программы <span class="program-header-green">похудения</span></p>
             </header>
         </section>
 
         <section class="container_12 program-slider">
             <div class="grid_4">
                 <div class="program-slider-block program-slider-block-el1">
-                    <div class="program-slider-block-image">
-                        <p>Фактор успеха</p>
-                    </div>
+                    <div class="program-slider-block-image" style="background: url(images/program-fu.png) 50% 0 no-repeat;"></div>
                     <div class="program-slider-block-title">
                         <p>Программа</p>
                         <p>"Фактор успеха"</p>
@@ -130,9 +128,7 @@
             </div>
             <div class="grid_4">
                 <div class="program-slider-block program-slider-block-el2">
-                    <div class="program-slider-block-image">
-                        <p>Фактор лёгкости</p>
-                    </div>
+                    <div class="program-slider-block-image" style="background: url(images/program-fl.png) 50% 0 no-repeat;"></div>
                     <div class="program-slider-block-title">
                         <p>Программа</p>
                         <p>"Фактор лёгкости"</p>
@@ -143,9 +139,7 @@
             </div>
             <div class="grid_4">
                 <div class="program-slider-block program-slider-block-el3">
-                    <div class="program-slider-block-image">
-                        <p>Фактор стройности</p>
-                    </div>
+                    <div class="program-slider-block-image" style="background: url(images/program-fs.png) 50% 0 no-repeat;"></div>
                     <div class="program-slider-block-title">
                         <p>Программа</p>
                         <p>"Фактор стройности"</p>
@@ -189,7 +183,7 @@
     <section class="feedback">
         <div class="container_12">
             <div class="grid_10 prefix_1 suffix_1">
-                <header class="feedback-title"><img src="images/icon-mark.png">Запишись на прием прямо сейчас</header>
+                <header class="feedback-title"><a name="feedback"></a><img src="images/icon-mark.png">Запишись на прием прямо сейчас</header>
                 <div class="feedback-form">
                     <form>
                         <input type="text" placeholder="Введите ваше имя">
@@ -204,7 +198,7 @@
     <section class="advantages">
         <section class="container_12 advantages-header">
             <header>
-                <p>Преимущества <span class="advantages-header-green">похудения</span></p>
+                <p><a name="advantages"></a>Преимущества <span class="advantages-header-green">похудения</span></p>
                 <p class="advantages-header-small">в клинике здорового питания "Фактор веса"</p>
             </header>
         </section>
@@ -289,7 +283,37 @@
         </section>
     </section>
 
-    <section class="feedback">
+    <section class="formula">
+        <section class="container_12 formula-block">
+            <section class="formula-header">
+                <header>
+                    <p><a name="formula"></a>Формула <span class="formula-header-green">вашего веса</span></p>
+                </header>
+            </section>
+
+            <section class="formula-calculate">
+                <div class="formula-calculate-title">Индекс массы тела</div>
+                <div class="formula-calculate-form">
+                    <form>
+                        <div class="formula-calculate-form-params">
+                            <input type="text" placeholder="Ваш рост (см)"/>
+                            <input type="text" placeholder="Ваш вес (кг)"/>
+                            <input type="text" placeholder="Ваш возраст"/>
+                        </div>
+                        <div class="formula-calculate-form-gender">
+                            <input type="radio" name="gender" /> Мужчина
+                            <input type="radio" name="gender"/> Женщина
+                        </div>
+                        <div class="formula-calculate-form-btn">
+                            <a class="btn btn-orange">Рассчитать мой вес</a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <section class="feedback" style="margin-top:0">
         <div class="container_12">
             <div class="grid_10 prefix_1 suffix_1">
                 <header class="feedback-title"><img src="images/icon-mark.png">Запишись на прием прямо сейчас</header>
@@ -314,7 +338,7 @@
         <section class="container_12 specialists-list">
             <div class="grid_3">
                 <div class="specialists-list-item">
-                    <div class="specialists-list-item-preview"></div>
+                    <div class="specialists-list-item-preview"><img src="images/specialist-mk.png" height="156" width="141" alt="*"></div>
                     <div class="specialists-list-item-title">Врач-диетолог</div>
                     <div class="specialists-list-item-description">Копытько Марина Владимировна</div>
                 </div>
@@ -322,7 +346,7 @@
 
             <div class="grid_3">
                 <div class="specialists-list-item">
-                    <div class="specialists-list-item-preview"></div>
+                    <div class="specialists-list-item-preview"><img src="images/specialist-sm.png" height="156" width="141" alt="*"></div>
                     <div class="specialists-list-item-title">Врач-диетолог, терапевт</div>
                     <div class="specialists-list-item-description">Студеникина Марина Анатольевна</div>
                 </div>
@@ -330,7 +354,7 @@
 
             <div class="grid_3">
                 <div class="specialists-list-item">
-                    <div class="specialists-list-item-preview"></div>
+                    <div class="specialists-list-item-preview"><img src="images/specialist-ba.png" height="156" width="141" alt="*"></div>
                     <div class="specialists-list-item-title">Врач-диетолог</div>
                     <div class="specialists-list-item-description">Белобедова Александра Сергеевна</div>
                 </div>
@@ -338,7 +362,7 @@
 
             <div class="grid_3">
                 <div class="specialists-list-item">
-                    <div class="specialists-list-item-preview"></div>
+                    <div class="specialists-list-item-preview"><img src="images/specialist-ss.png" height="156" width="141" alt="*"></div>
                     <div class="specialists-list-item-title">Диетолог-нутрициолог</div>
                     <div class="specialists-list-item-description">Сарапкина Светлана Викторовна</div>
                 </div>
@@ -351,6 +375,25 @@
             <header>
                 <p>Часто задаваемые <span class="faq-header-green">вопросы</span></p>
             </header>
+        </section>
+
+        <section class="container_12 faq-list">
+            <div class="grid_6">
+                <ul>
+                    <li>За сколько времени можно похудеть на 5 кг?</li>
+                    <li>Можно ли похудеть если я не люблю и не могу заниматься физической активностью?</li>
+                    <li>Я не могу жить без сыра и шоколада, можно ли мне будет похудеть в Вашей клинике?</li>
+                    <li>Можно ли беременным женщинам наблюдаться в Вашей клинике?</li>
+                    <li>Берете ли Вы в программы людей, желающих набрать вес?</li>
+                </ul>
+            </div>
+
+            <div class="grid_6">
+                <ul>
+                    <li>За сколько времени можно похудеть на 5 кг?</li>
+                    <li>Берете ли Вы в программы людей, желающих набрать вес?</li>
+                </ul>
+            </div>
         </section>
     </section>
 
@@ -374,6 +417,33 @@
             <header>
                 <p>Отзывы наших <span class="reviews-header-green">клиентов</span></p>
             </header>
+        </section>
+
+
+        <section class="container_12 reviews-list">
+            <ul>
+                <li class="grid_6">
+                    <div class="reviews-list-item">
+                        <p>Выражаю большую благодарность и уважение всем, кто помог мне пройти данный курс и поддерживал меня. Особая благодарность специалисту соединившему всех, моему ведущему врачу-диетологу - Марине Владимировне Копытько.</p>
+                        <div class="reviews-list-item-person">
+                            <div class="reviews-list-item-image"><img src="images/demo-review-1.png" height="143" width="143"></div>
+                            <p class="reviews-list-item-title">Виктор К.</p>
+                            <p class="reviews-list-item-description">Финансовый консультант</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="grid_6">
+                    <div class="reviews-list-item">
+                        <p>Мне было важно не только похудеть. но и сохранить стройность, продолжая активно работать и вести полноценную жизнь заботливой мамы, внимательной супруги и хорошего работника. И я все это смогла, за что признательна клинике "Фактор веса".</p>
+                        <div class="reviews-list-item-person">
+                            <div class="reviews-list-item-image"><img src="images/demo-review-2.png" height="143" width="143"></div>
+                            <p class="reviews-list-item-title">Екатерина М.</p>
+                            <p class="reviews-list-item-description">Менеджер по продажам</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </section>
     </section>
 
@@ -410,6 +480,41 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="contacts"> 
+        <a name="contacts"></a>
+        <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ajYx9mtntR1e7yAEL5CbO6nbpAAHEafj&width=100%&height=450&lang=ru_RU&sourceType=constructor"></script>
+
+        <div class="contacts-container container_12">
+            <div class="contacts-block">
+                <div class="contacts-block-header"><img src="images/footer-logo.png" width="227" height="94" alt="*" /></div>
+                <div class="contacts-block-tel">
+                    <div><img src="images/icon-tel.png" height="18" width="15" alt=""></div>
+                    <div><a href="call:+79637871111">+7 (963) 787-11-11</a></div>                    
+                </div>
+                <div class="clear"></div>
+                <div class="contacts-block-address">
+                    <div><img src="images/icon-point.png" height="21" width="15" alt=""></div>
+                    <div>г. Москва м.Новослободская<br/>ул. Краснопролетарская д. 16, стр.2</div>
+                </div>
+                <div class="clear"></div>
+                <div class="contacts-block-feedback"><a href="#feedback" class="btn btn-green">Обрытный звонок</a></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <section class="container_12">
+            <div class="grid_8 footer-copy">2016 © Клиника здорового питания «Фактор веса». Все права защищены.</div>
+            <div class="grid_4 footer-social">
+                <a href="https://www.facebook.com/factorvesa.ru"><img src="images/icon-fb.png" height="32" width="32" alt="*"></a>
+                <a href="https://twitter.com/FactorVesa"><img src="images/icon-twitter.png" height="32" width="32" alt="*"></a>
+                <a href="http://vk.com/club22504623"><img src="images/icon-vk.png" height="32" width="32" alt="*"></a>
+                <a href="http://ok.ru/factorvesa"><img src="images/icon-o.png" height="32" width="32" alt="*"></a>
+                <a href="https://plus.google.com/b/106854310111908192482/106854310111908192482/posts"><img src="images/icon-google.png" height="32" width="32" alt="*"></a>
+            </div>
+        </section>
     </section>
 
 </body>
