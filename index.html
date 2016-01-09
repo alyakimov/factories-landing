@@ -10,6 +10,7 @@
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="css/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
     <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>  
     
     <title>Фактор Веса | Главная</title>
@@ -19,8 +20,10 @@
             $(".fancybox").fancybox();
 
             $(".modal-specialist").fancybox({
-                width       : 960,
-                height      : '100%',
+                maxWidth    : 960,
+                maxHeight   : 1024,
+                width       : '70%',
+                height      : '70%',
                 fitToView   : false,
                 autoSize    : false,
                 closeClick  : false,
@@ -29,13 +32,59 @@
             });
 
             $(".modal-program").fancybox({
-                width       : 960,
-                height      : '75%',
+                maxWidth    : 960,
+                maxHeight   : 768,
+                width       : '70%',
+                height      : '70%',
                 fitToView   : false,
                 autoSize    : false,
                 closeClick  : false,
                 openEffect  : 'none',
                 closeEffect : 'none'
+            });
+
+            $('#calculate-submit').click(function(event){
+                var height = parseInt($('#calculate_height').val());
+                var weight = parseInt($('#calculate_weight').val());
+
+                if(isNaN(height) || isNaN(weight)){
+                    $('#calculate-result').html('<div class="formula-calculate-result"><div class="formula-calculate-result-title">Неверный формат данных</div></div>');
+                } else {
+                
+                    var imt = Math.round(weight/Math.pow(height/100, 2));
+                    var imt_comment = "";
+                    var imt_smile = ":-)";                    
+            
+                    if (imt < 18.5){
+                        imt_comment = "Дефицит массы тела. Низкий  риск возникновения сердечно-сосудистых заболеваний, сахарного диабета 2 типа, онкозаболеваний (повышен риск других заболеваний).";
+                        imt_smile = ":-(";
+                    }
+                    if (imt >= 18.5 && imt <= 24.9){
+                        imt_comment = "Нормальная масса тела. Обычный риск возниковения сердечно-сосудистых заболеваний, сахарного диабета 2 типа, онкозаболеваний.";
+                        imt_smile = ":-)";
+                    }
+                    if (imt >= 25 && imt <= 29.9){
+                        imt_comment = "Избыточная масса тела (предожирение). Повышенный риск возникновения сердечно-сосудистых заболеваний, сахарного диабета 2 типа, онкозаболеваний.";
+                        imt_smile = ":-(";
+                    }
+                    if (imt >= 30 && imt <= 34.9){
+                        imt_comment = "Ожирение I степени. Высокий риск возникновения сердечно-сосудистых заболеваний, сахарного диабета 2 типа, онкозаболеваний.";
+                        imt_smile = ":-(";
+                    }
+                    if (imt >= 35 && imt <= 39.9){
+                        imt_comment = "Ожирение II степени. Очень высокий риск возникновения сердечно-сосудистых заболеваний, сахарного диабета 2 типа, онкозаболеваний.";
+                        imt_smile = ":-(";
+                    }
+                    if (imt >= 40){
+                        imt_comment = "Ожирение III степени. Чрезвычайно высокий  риск возникновения сердечно-сосудистых заболеваний, сахарного диабета 2 типа, онкозаболеваний.";
+                        imt_smile = ":-(";
+                    }
+            
+                    $('#calculate_height').val(height);
+                    $('#calculate_weight').val(weight);
+                    $('#calculate-result').html('<div class="formula-calculate-result"><div class="formula-calculate-result-title"><p>Результат: <span class="text-orange">' + imt_smile + '</span> Ваш ИМТ = <span class="text-orange">' + imt + '</span></p></div><div class="formula-calculate-result-description"><p>' + imt_comment + '</p></div></div>');
+                }
+                return false;
             });
         });
     </script>
@@ -330,8 +379,8 @@
                 <div class="formula-calculate-form">
                     <form>
                         <div class="formula-calculate-form-params">
-                            <input type="text" placeholder="Ваш рост (см)"/>
-                            <input type="text" placeholder="Ваш вес (кг)"/>
+                            <input type="text" id="calculate_height" placeholder="Ваш рост (см)"/>
+                            <input type="text" id="calculate_weight" placeholder="Ваш вес (кг)"/>
                             <input type="text" placeholder="Ваш возраст"/>
                         </div>
                         <div class="formula-calculate-form-gender">
@@ -339,19 +388,12 @@
                             <input type="radio" name="gender"/> Женщина
                         </div>
                         <div class="formula-calculate-form-btn">
-                            <a class="btn btn-orange">Рассчитать мой вес</a>
+                            <a class="btn btn-orange" id="calculate-submit">Рассчитать мой вес</a>
                         </div>
                     </form>                    
                 </div>
 
-                <div class="formula-calculate-result">
-                    <div class="formula-calculate-result-title">
-                        <p>Результат: <span class="text-orange">:-(</span> Ваш ИМТ = <span class="text-orange">28</span></p>
-                    </div>
-                    <div class="formula-calculate-result-description">
-                        <p>Избыточная масса тела (предожирение). Повышенный риск возникновения сердечно-сосудистых заболеваний, сахарного диабета 2 типа, онкозаболеваний.</p>
-                    </div>
-                </div>
+                <div id="calculate-result"></div>                
             </section>
         </section>
     </section>
