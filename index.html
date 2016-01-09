@@ -6,8 +6,39 @@
     <meta name="MobileOptimized" content="1200"/>
     <meta name="HandheldFriendly" content="true"/>
     <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="css/style.css" />    
+    <link rel="stylesheet" href="css/style.css" />  
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>  
+    
     <title>Фактор Веса | Главная</title>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".fancybox").fancybox();
+
+            $(".modal-specialist").fancybox({
+                width       : 960,
+                height      : '100%',
+                fitToView   : false,
+                autoSize    : false,
+                closeClick  : false,
+                openEffect  : 'none',
+                closeEffect : 'none'
+            });
+
+            $(".modal-program").fancybox({
+                width       : 960,
+                height      : '75%',
+                fitToView   : false,
+                autoSize    : false,
+                closeClick  : false,
+                openEffect  : 'none',
+                closeEffect : 'none'
+            });
+        });
+    </script>
 </head>
 <body>
     <section class="container_12 header">
@@ -99,7 +130,7 @@
                             <p class="main-video-header">Копытько Марина Владимировна</p>
                             <p class="main-video-position">Практикующий врач - диетолог</p>
                             <p class="main-video-description">Более 10 лет работала в ГУ НИИ питания РАМН, вела прием в нескольких Московских клиниках и СПА центрах. 35 научных публикаций в отечественных и зарубежных медицинских изданиях</p>
-                            <p class="main-video-readmore"><a href="" class="btn btn-green">Подробнее</a></p>
+                            <p class="main-video-readmore"><a href="modal-specialist.html" class="btn btn-green modal-specialist" data-fancybox-type="iframe">Подробнее</a></p>
                         </div>
                     </div>
                 </div>
@@ -125,7 +156,7 @@
                         <p>"Фактор успеха"</p>
                     </div>
                     <p class="program-slider-block-description">Авторская эффективная методика похудения за 2 месяца</p>
-                    <p class="program-slider-block-btn"><a href="" class="btn btn-green">Подробнее</a></p>
+                    <p class="program-slider-block-btn"><a href="modal-program.html" class="btn btn-green modal-program" data-fancybox-type="iframe">Подробнее</a></p>
                 </div>
                 </li>
                 <li class="grid_4">
@@ -136,7 +167,7 @@
                         <p>"Фактор лёгкости"</p>
                     </div>
                     <p class="program-slider-block-description">Авторская эффективная методика похудения за 2 месяца</p>
-                    <p class="program-slider-block-btn"><a href="" class="btn btn-green">Подробнее</a></p>
+                    <p class="program-slider-block-btn"><a href="modal-program.html" class="btn btn-green modal-program" data-fancybox-type="iframe">Подробнее</a></p>
                 </div>
                 </li>
                 <li class="grid_4">
@@ -147,7 +178,7 @@
                         <p>"Фактор стройности"</p>
                     </div>
                     <p class="program-slider-block-description">Авторская эффективная методика похудения за 2 месяца</p>
-                    <p class="program-slider-block-btn"><a href="" class="btn btn-green">Подробнее</a></p>
+                    <p class="program-slider-block-btn"><a href="modal-program.html" class="btn btn-green modal-program" data-fancybox-type="iframe">Подробнее</a></p>
                 </div>
                 </li>
             </ul>                        
@@ -310,7 +341,16 @@
                         <div class="formula-calculate-form-btn">
                             <a class="btn btn-orange">Рассчитать мой вес</a>
                         </div>
-                    </form>
+                    </form>                    
+                </div>
+
+                <div class="formula-calculate-result">
+                    <div class="formula-calculate-result-title">
+                        <p>Результат: <span class="text-orange">:-(</span> Ваш ИМТ = <span class="text-orange">28</span></p>
+                    </div>
+                    <div class="formula-calculate-result-description">
+                        <p>Избыточная масса тела (предожирение). Повышенный риск возникновения сердечно-сосудистых заболеваний, сахарного диабета 2 типа, онкозаболеваний.</p>
+                    </div>
                 </div>
             </section>
         </section>
@@ -342,7 +382,11 @@
             <ul>
                 <li class="grid_3">
                     <div class="specialists-list-item">
-                        <div class="specialists-list-item-preview"><img src="images/specialist-mk.png" height="156" width="141" alt="*"></div>
+                        <div class="specialists-list-item-preview">
+                            <a href="modal-specialist.html" class="modal-specialist" data-fancybox-type="iframe">
+                                <img src="images/specialist-mk.png" height="156" width="141" alt="*">
+                            </a>    
+                        </div>
                         <div class="specialists-list-item-title">Врач-диетолог</div>
                         <div class="specialists-list-item-description">Копытько Марина Владимировна</div>
                     </div>
@@ -350,7 +394,11 @@
 
                 <li class="grid_3">
                     <div class="specialists-list-item">
-                        <div class="specialists-list-item-preview"><img src="images/specialist-sm.png" height="156" width="141" alt="*"></div>
+                        <div class="specialists-list-item-preview">
+                            <a href="modal-specialist.html" class="modal-specialist" data-fancybox-type="iframe">
+                                <img src="images/specialist-sm.png" height="156" width="141" alt="*">
+                            </a>
+                        </div>
                         <div class="specialists-list-item-title">Врач-диетолог, терапевт</div>
                         <div class="specialists-list-item-description">Студеникина Марина Анатольевна</div>
                     </div>
@@ -358,7 +406,11 @@
 
                 <li class="grid_3">
                     <div class="specialists-list-item">
-                        <div class="specialists-list-item-preview"><img src="images/specialist-ba.png" height="156" width="141" alt="*"></div>
+                        <div class="specialists-list-item-preview">
+                            <a href="modal-specialist.html" class="modal-specialist" data-fancybox-type="iframe">
+                                <img src="images/specialist-ba.png" height="156" width="141" alt="*">
+                            </a>
+                        </div>
                         <div class="specialists-list-item-title">Врач-диетолог</div>
                         <div class="specialists-list-item-description">Белобедова Александра Сергеевна</div>
                     </div>
@@ -366,7 +418,11 @@
 
                 <li class="grid_3">
                     <div class="specialists-list-item">
-                        <div class="specialists-list-item-preview"><img src="images/specialist-ss.png" height="156" width="141" alt="*"></div>
+                        <div class="specialists-list-item-preview">
+                            <a href="modal-specialist.html" class="modal-specialist" data-fancybox-type="iframe">
+                                <img src="images/specialist-ss.png" height="156" width="141" alt="*">
+                            </a>
+                        </div>
                         <div class="specialists-list-item-title">Диетолог-нутрициолог</div>
                         <div class="specialists-list-item-description">Сарапкина Светлана Викторовна</div>
                     </div>
