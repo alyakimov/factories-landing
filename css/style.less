@@ -100,7 +100,7 @@ img {
 
     .header-tel {
         padding-left: (20 / @baseFontSize) + 0rem;
-        padding-right: (25 / @baseFontSize) + 0rem;
+        padding-right: (15 / @baseFontSize) + 0rem;
         padding-top: (7 / @baseFontSize) + 0rem;
 
         img {
@@ -538,7 +538,12 @@ img {
         padding-right: (15 / @baseFontSize) + 0rem;
 
         .specialists-list-item-preview {
-
+            img {
+                border: (2 / @baseFontSize) solid #d0d0d0;
+                -webkit-border-radius: 100px;
+                -moz-border-radius: 100px;
+                border-radius: 100px;
+            }
         }
 
         .specialists-list-item-title {
@@ -554,7 +559,23 @@ img {
             font-weight: 500;
             font-style: italic;
         }
-    }   
+    }
+
+    .specialists-list {
+        position: relative;
+
+        .specialists-slider-prev {
+            position: absolute;
+            left: -5%;
+            top: 50%;
+        }
+
+        .specialists-slider-next {
+            position: absolute;
+            right: -5%;
+            top: 50%;
+        } 
+    }    
 }
 
 .faq {
@@ -593,6 +614,12 @@ img {
             background-repeat: no-repeat;
             background-position: 0 .2em;
         }
+
+        .faq-list-answer {
+            display: none;
+            border: (2 / @baseFontSize) + 0rem solid @secondaryFontColor;
+            padding: (30 / @baseFontSize) + 0rem;
+        }
     }
 }
 
@@ -613,8 +640,11 @@ img {
     .reviews-list {
 
         margin-top: (50 / @baseFontSize) + 0rem;
+        position: relative;
 
         .reviews-list-item {
+            margin-top: (10 / @baseFontSize) + 0rem;
+            margin-bottom: (10 / @baseFontSize) + 0rem;
             position: relative;
             border: (2 / @baseFontSize) + 0rem solid #ebebeb;
             padding: (35 / @baseFontSize) + 0rem;
@@ -657,6 +687,18 @@ img {
             content: url("../images/icon-quote.png");
             bottom: ((18 / @baseFontSize) + 0rem) * -1;
             right: (15 / @baseFontSize) + 0rem;
+        }
+
+        .rewiews-slider-prev {
+            position: absolute;
+            left: -5%;
+            top: 50%;
+        }
+
+        .rewiews-slider-next {
+            position: absolute;
+            right: -5%;
+            top: 50%;
         }
     }
 }
@@ -806,6 +848,13 @@ img {
         float: left;
         margin-right: (35 / @baseFontSize) + 0rem;
         margin-bottom: (35 / @baseFontSize) + 0rem;
+
+        img {
+            border: (2 / @baseFontSize) solid #d0d0d0;
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            border-radius: 100px;
+        }
     }
 
     .modal-window-specialist-title {
