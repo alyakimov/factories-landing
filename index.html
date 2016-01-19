@@ -29,7 +29,12 @@
                 autoSize    : false,
                 closeClick  : false,
                 openEffect  : 'none',
-                closeEffect : 'none'
+                closeEffect : 'none',
+                helpers: {
+                    overlay: {
+                        locked: false
+                    }
+                }
             });
 
             $(".modal-program").fancybox({
@@ -41,7 +46,12 @@
                 autoSize    : false,
                 closeClick  : false,
                 openEffect  : 'none',
-                closeEffect : 'none'
+                closeEffect : 'none',
+                helpers: {
+                    overlay: {
+                        locked: false
+                    }
+                }
             });
 
             $('#rewiews-slider').carouFredSel({
@@ -74,6 +84,9 @@
             }).trigger('resize');
 
             $('#calculate-submit').click(function(event){
+
+                event.preventDefault();
+
                 var height = parseInt($('#calculate_height').val());
                 var weight = parseInt($('#calculate_weight').val());
 
@@ -113,12 +126,12 @@
                     $('#calculate_height').val(height);
                     $('#calculate_weight').val(weight);
                     $('#calculate-result').html('<div class="formula-calculate-result"><div class="formula-calculate-result-title"><p>Результат: <span class="text-orange">' + imt_smile + '</span> Ваш ИМТ = <span class="text-orange">' + imt + '</span></p></div><div class="formula-calculate-result-description"><p>' + imt_comment + '</p></div></div>');
-                }
-                
-                event.preventDefault();
+                }                                
             });
 
             $('[id^=question-]').click(function(event){
+
+                event.preventDefault();
                 
                 var question = this.id.split("-");
                 var questionId = question[1];
@@ -126,8 +139,6 @@
                 var answerId = "answer-" + questionId;
 
                 $('#' + answerId).toggle();
-
-                event.preventDefault();
             });
         });
     </script>
