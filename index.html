@@ -141,8 +141,12 @@
                 $('#' + answerId).toggle();
             });
 
-            $("feedback-form-action").submit(function() {
+            $("feedback-form-action").submit(function(event) {
+
+                event.preventDefault();
+
                 var form_data = $(this).serialize();
+                
                 $.ajax({
                     type: "POST",
                     url: "http://www.factorvesa.ru/ajax.mail.php",
