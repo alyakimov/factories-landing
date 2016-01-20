@@ -152,7 +152,7 @@
                     url: "http://www.factorvesa.ru/ajax.mail.php",
                     data: form_data,
                     success: function(data) {
-                       form.hidden();
+                       alert(data);
                     }
                 });
             });
@@ -296,7 +296,7 @@
                         <p>Программа</p>
                         <p>"Фактор стройности"</p>
                     </div>
-                    <p class="program-slider-block-description">Индивидуальная программа  стройности от диетолога  за  2  месяца</p>
+                    <p class="program-slider-block-description">Индивидуальная программа стройности за  2  месяца</p>
                     <p class="program-slider-block-btn"><a href="modal-program-factor-stroinosti.html" class="btn btn-green modal-program" data-fancybox-type="iframe">Подробнее</a></p>
                 </div>
                 </li>
@@ -468,7 +468,7 @@
         </section>
     </section>
 
-    <section class="feedback">
+    <section class="feedback" style="margin-top:0">
         <div class="container_12">
             <div class="grid_10 prefix_1 suffix_1">
                 <header class="feedback-title"><a name="feedback"></a><img src="images/icon-mark.png">Запишись на прием прямо сейчас</header>
@@ -861,7 +861,7 @@
         <div class="container_12">
             <div class="grid_10 prefix_1 suffix_1">
                 <header class="feedback-title"><img src="images/icon-mark.png">Запишись на прием прямо сейчас</header>
-                <div>
+                <div class="feedback-form">
                     <form>
                         <input type="text" name="name" placeholder="Введите ваше имя" required="required">
                         <input type="text" name="phone" placeholder="Введите ваш телефон" required="required">
