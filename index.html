@@ -144,15 +144,15 @@
             $(".feedback-form-action").click(function(event) {
 
                 event.preventDefault();
-
-                var form_data = $(this).closest('form').serialize();
+                var form = $(this).closest('form');
+                var form_data = form.serialize();
                 
                 $.ajax({
                     type: "POST",
                     url: "http://www.factorvesa.ru/ajax.mail.php",
                     data: form_data,
-                    success: function() {
-                       alert("Ваше сообщение отпрвлено!");
+                    success: function(data) {
+                       form.hidden();
                     }
                 });
             });
