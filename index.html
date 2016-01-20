@@ -141,11 +141,11 @@
                 $('#' + answerId).toggle();
             });
 
-            $("feedback-form-action").submit(function(event) {
+            $("feedback-form-action").click(function(event) {
 
                 event.preventDefault();
 
-                var form_data = $(this).serialize();
+                var form_data = $(this).closest('form').serialize();
                 
                 $.ajax({
                     type: "POST",
