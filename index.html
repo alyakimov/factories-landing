@@ -140,6 +140,17 @@
 
                 $('#' + answerId).toggle();
             });
+
+            $("feedback-form-action").submit(function() {
+                var form_data = $(this).serialize();
+                $.ajax({
+                type: "POST",
+                url: "http://www.factorvesa.ru/ajax.mail.php",
+                data: form_data,
+                success: function() {
+                       alert("Ваше сообщение отпрвлено!");
+                });
+            });
         });
     </script>
 </head>
@@ -322,10 +333,10 @@
             <div class="grid_10 prefix_1 suffix_1">
                 <header class="feedback-title"><a name="feedback"></a><img src="images/icon-mark.png">Запишись на прием прямо сейчас</header>
                 <div class="feedback-form">
-                    <form>
-                        <input type="text" placeholder="Введите ваше имя">
-                        <input type="text" placeholder="Введите ваш телефон">
-                        <a class="btn btn-orange">Записаться</a>
+                    <form class="feedback-form-action">
+                        <input type="text" placeholder="Введите ваше имя" required="required">
+                        <input type="text" placeholder="Введите ваш телефон" required="required">
+                        <button class="btn btn-orange" value="submitform">Записаться</button>
                     </form>
                 </div>
             </div>
@@ -452,15 +463,15 @@
         </section>
     </section>
 
-    <section class="feedback" style="margin-top:0">
+    <section class="feedback">
         <div class="container_12">
             <div class="grid_10 prefix_1 suffix_1">
-                <header class="feedback-title"><img src="images/icon-mark.png">Запишись на прием прямо сейчас</header>
+                <header class="feedback-title"><a name="feedback"></a><img src="images/icon-mark.png">Запишись на прием прямо сейчас</header>
                 <div class="feedback-form">
-                    <form>
-                        <input type="text" placeholder="Введите ваше имя">
-                        <input type="text" placeholder="Введите ваш телефон">
-                        <a class="btn btn-orange">Записаться</a>
+                    <form class="feedback-form-action">
+                        <input type="text" placeholder="Введите ваше имя" required="required">
+                        <input type="text" placeholder="Введите ваш телефон" required="required">
+                        <button class="btn btn-orange" value="submitform">Записаться</button>
                     </form>
                 </div>
             </div>
@@ -656,12 +667,12 @@
     <section class="feedback">
         <div class="container_12">
             <div class="grid_10 prefix_1 suffix_1">
-                <header class="feedback-title"><img src="images/icon-mark.png">Запишись на прием прямо сейчас</header>
+                <header class="feedback-title"><a name="feedback"></a><img src="images/icon-mark.png">Запишись на прием прямо сейчас</header>
                 <div class="feedback-form">
-                    <form>
-                        <input type="text" placeholder="Введите ваше имя">
-                        <input type="text" placeholder="Введите ваш телефон">
-                        <a class="btn btn-orange">Записаться</a>
+                    <form class="feedback-form-action">
+                        <input type="text" placeholder="Введите ваше имя" required="required">
+                        <input type="text" placeholder="Введите ваш телефон" required="required">
+                        <button class="btn btn-orange" value="submitform">Записаться</button>
                     </form>
                 </div>
             </div>
