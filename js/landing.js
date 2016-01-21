@@ -151,16 +151,17 @@ $(window).load(function() {
         $.ajax({
             type: "POST",
             url: "http://www.factorvesa.ru/ajax.mail.php",
+            dataType:"json",
             data: form_data,
             success: function(data) {
 
                 var message = form.find(".feedback-form-message");
 
                 if (data.status == "success") {
-                    message.html(data.message);
+                    message.text(data.message);
                     form.hidden();
                 } else {
-                    message.html(data.message);
+                    message.text(data.message);
                 }
             }
         });
