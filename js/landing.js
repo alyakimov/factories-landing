@@ -147,6 +147,9 @@ $(window).load(function() {
         
         var form = $(this).closest('form');
         var form_data = form.serialize();
+        var message = form.find(".feedback-form-message");
+
+        message.text("");
 
         $.ajax({
             type: "POST",
@@ -154,8 +157,6 @@ $(window).load(function() {
             dataType:"json",
             data: form_data,
             success: function(data) {
-
-                var message = form.find(".feedback-form-message");
 
                 if (data.status == "success") {
                     message.text(data.message);
