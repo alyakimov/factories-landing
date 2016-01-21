@@ -154,7 +154,7 @@ $(window).load(function() {
             data: form_data,
             success: function(data) {
 
-                var message = form.find(".message");
+                var message = form.find(".feedback-form-message");
 
                 if (data.status == "success") {
                     message.html(data.message);
