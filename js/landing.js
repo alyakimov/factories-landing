@@ -159,7 +159,6 @@ $(window).load(function() {
 
                 if (data.status == "success") {
                     message.text(data.message);
-                    form.hidden();
                 } else {
                     message.text(data.message);
                 }
